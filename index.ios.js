@@ -6,12 +6,14 @@ import {
   View
   } from 'react-native'
 
+import Icon from 'react-native-vector-icons/Ionicons'
+
 class App extends Component {
   render() {
     return(
       <View style={styles.container}>
         <View style={styles.header}>
-        <Text>icon</Text>
+        <Icon name={'ios-sunny'} size={80} color={'white'}/>
         <Text style={styles.temp}>24°</Text>
         </View>
         <View style={styles.body}>
