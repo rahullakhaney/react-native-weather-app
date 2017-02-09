@@ -3,7 +3,8 @@ import {
   AppRegistry,
   StyleSheet,
   Text,
-  View
+  View,
+  StatusBar
   } from 'react-native'
 
 import Icon from 'react-native-vector-icons/Ionicons'
@@ -12,12 +13,15 @@ class App extends Component {
   render() {
     return(
       <View style={styles.container}>
+      <StatusBar hidden={true}/>
         <View style={styles.header}>
         <Icon name={'ios-sunny'} size={80} color={'white'}/>
         <Text style={styles.temp}>24°</Text>
         </View>
         <View style={styles.body}>
-        <Text style={styles.title}>Build a Fucking Weather App</Text>
+        <Text style={styles.title}>
+        Build a <Text style={{color: 'red'}}>Fishing</Text> Weather App
+        </Text>
         <Text style={styles.subtitle}>Lets make it rain</Text>
         </View>
       </View>
