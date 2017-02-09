@@ -8,8 +8,28 @@ import {
   } from 'react-native'
 
 import Icon from 'react-native-vector-icons/Ionicons'
+import {fetchWeather} from './weatherAPI'
 
 class App extends Component {
+
+  componentDidMount() {
+    this.getLocation()
+    fetchWeather(-21,28)
+  }
+
+  getLocation() {
+
+    navigator.geolocation.getCurrentPosition(
+
+      (posData) => console.log(posData),
+      (error) => alert(error),
+      {timeout:10000}
+
+      )
+
+  }
+
+
   render() {
     return(
       <View style={styles.container}>
